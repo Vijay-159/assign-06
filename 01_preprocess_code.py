@@ -22,15 +22,24 @@ import unittest
 # Return the output, No need read input or print the ouput
 
 def remove_comments(lines):
-    """ 
+    """
     Input: lines of code as a string
     Returns: lines of code as a string after removing the comments.
 
-    hint: 
+    hint:
         Use string methods like split and strip.
         Handle empty lines in code as well.
     """
     # implement your logic here
+    l=lines.split('\n')
+    s=''
+    for i in range(len(l)):
+        if '#' not in l[i]:
+            if i==len(l)-1:
+                s=s+l[i]
+            else:
+                s=s+l[i]+'\n'
+    return s
     pass
 
 
