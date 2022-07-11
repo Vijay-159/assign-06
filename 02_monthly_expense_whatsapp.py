@@ -1,5 +1,5 @@
 '''
-User regular expressions 
+User regular expressions
 to find out the occurances of the numbers
 from the whatsapp messages
 and compute the total expense
@@ -11,15 +11,17 @@ https://towardsdatascience.com/regular-expressions-in-python-a212b1c73d7f
 import re
 import unittest
 
-from cv2 import exp
+#from cv2 import exp
 
 def total_monthly_expense(whatsapp_msgs):
-    """ 
+    """
     Return the total expenditure of the month from the whatsapp_msgs
     """
     total_expense = 0
     # Write your implementation here
-
+    x=re.findall(r"[0-9]+",whatsapp_msgs)
+    for i in x:
+        total_expense=total_expense+int(i)
     return total_expense
 
 class Total_monthly_expense(unittest.TestCase):
@@ -74,7 +76,7 @@ no need of discription
         whatsapp_msgs += " zommato - 200 and 399"
         total_expense = total_monthly_expense(whatsapp_msgs)
         self.assertEqual(total_expense, 4182)
-    
+
     def test_month_05(self):
         whatsapp_msgs = """
 this is simple one liner
