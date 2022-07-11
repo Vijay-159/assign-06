@@ -11,7 +11,7 @@ Each file contains few functions, for which you have to write the implementation
 After completing the implementation to check the correctness. 
 Use the following command, in the terminal. Example to test the correctness of the first problem.
 ```
-python 01_preprocess_code.py
+python 01_preprocess_code.py 
 ```
 
 *Note: Once you solve a problem, **immedietly write your observation** for the solved problem. Only after writing obsevation for the solved problem, start solving another problem.*
